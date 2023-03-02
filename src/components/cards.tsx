@@ -1,10 +1,11 @@
 import { Text, View, Image } from "native-base";
 import Pin from "../assets/pin-icon.png";
 import { TouchableOpacity } from "react-native";
+import { Details } from "../screens/details";
 
-export function Cards({ title, image, location }) {
+export function Cards({ title, image, location, navigation }) {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate("Details")}>
       <View
         display="flex"
         h="240px"

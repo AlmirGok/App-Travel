@@ -65,6 +65,7 @@ export function Home({ navigation }) {
             pt: 2,
           }}
         />
+
         <FlatList
           data={DATA}
           renderItem={({ item }) => (
@@ -72,6 +73,7 @@ export function Home({ navigation }) {
               title={item.title}
               location={item.location}
               image={item.image}
+              navigation={navigation}
             />
           )}
           keyExtractor={(item) => item.id}
@@ -82,6 +84,7 @@ export function Home({ navigation }) {
             pb: 2,
           }}
         />
+
         <Box.Title>Activities</Box.Title>
         <FlatList
           data={dataActivities}
@@ -103,6 +106,7 @@ export function Home({ navigation }) {
               title={item.title}
               location={item.location}
               image={item.image}
+              navigation={navigation}
             />
           )}
           keyExtractor={(item) => item.id}
